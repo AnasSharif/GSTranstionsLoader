@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HXt-BE-ZOI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Translation Loader View Controller-->
+        <scene sceneID="BOI-ze-X6v">
+            <objects>
+                <viewController id="HXt-BE-ZOI" customClass="TranslationLoaderViewController" customModule="GSheetTranslationLoader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gu4-S4-87J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnT-Oq-3zW" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="182" y="471" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6Rz-H5-V3c"/>
+                                    <constraint firstAttribute="height" constant="50" id="Suc-9H-hJW"/>
+                                </constraints>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU6-Ar-4li">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <state key="normal" title="Generate Files">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="queryBtn:" destination="HXt-BE-ZOI" eventType="touchUpInside" id="6Kj-vi-33O"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WAd-c6-MmQ">
+                                <rect key="frame" x="139.5" y="77" width="135" height="32"/>
+                                <segments>
+                                    <segment title="iOS"/>
+                                    <segment title="Android"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RN7-aV-byy"/>
+                        <color key="backgroundColor" white="0.83563988099999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RU6-Ar-4li" firstAttribute="centerX" secondItem="MnT-Oq-3zW" secondAttribute="centerX" id="9G9-WA-obx"/>
+                            <constraint firstItem="RU6-Ar-4li" firstAttribute="centerX" secondItem="gu4-S4-87J" secondAttribute="centerX" id="9Mq-Dt-hXp"/>
+                            <constraint firstItem="RU6-Ar-4li" firstAttribute="centerY" secondItem="MnT-Oq-3zW" secondAttribute="centerY" constant="-48" id="GD6-zo-n1O"/>
+                            <constraint firstItem="WAd-c6-MmQ" firstAttribute="top" secondItem="RN7-aV-byy" secondAttribute="top" constant="33" id="KOt-Ah-SLU"/>
+                            <constraint firstItem="RU6-Ar-4li" firstAttribute="centerY" secondItem="gu4-S4-87J" secondAttribute="centerY" id="SxH-2D-Yut"/>
+                            <constraint firstItem="WAd-c6-MmQ" firstAttribute="centerX" secondItem="gu4-S4-87J" secondAttribute="centerX" id="cZv-Nm-sb4"/>
+                            <constraint firstItem="MnT-Oq-3zW" firstAttribute="centerX" secondItem="gu4-S4-87J" secondAttribute="centerX" id="wuC-JV-tHt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="genrateFilesBtn" destination="RU6-Ar-4li" id="WO4-v6-hC0"/>
+                        <outlet property="indicatorView" destination="MnT-Oq-3zW" id="A6G-tA-Dv5"/>
+                        <outlet property="translationType" destination="WAd-c6-MmQ" id="ZJ5-FC-qwN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DN8-q4-cUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="82"/>
+        </scene>
+    </scenes>
+</document>

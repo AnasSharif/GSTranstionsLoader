@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_GSheetTranslationLoader_GSheetTranslationLoaderUITests : NSObject
+@end
+@implementation PodsDummy_Pods_GSheetTranslationLoader_GSheetTranslationLoaderUITests
+@end

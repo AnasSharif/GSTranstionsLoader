@@ -1,0 +1,6 @@
+framework module Pods_GSheetTranslationLoader {
+  umbrella header "Pods-GSheetTranslationLoader-umbrella.h"
+
+  export *
+  module * { export * }
+}
